@@ -1,0 +1,134 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --gray-100: hsla(210, 17%, 98%, 1);
+  --gray-200: hsla(210, 14%, 89%, 1);
+  --gray-300: hsla(210, 11%, 71%, 1);
+  --gray-400: hsla(210, 9%, 31%, 1);
+  --gray-500: hsla(210, 11%, 15%, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg-color: var(--gray-500);
+    --text-color: var(--gray-100);
+    --hover-link-color: var(--gray-200);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --bg-color: var(--gray-200);
+    --text-color: var(--gray-500);
+    --hover-link-color: var(--gray-400);
+  }
+}
+
+.bg-filter {
+  background: var(--bg-color);
+}
+
+.bg-filter img {
+  mix-blend-mode: overlay;
+  filter: grayscale(100%) contrast(80%);
+  opacity: 1;
+}
+
+footer {
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  display: block;
+  overflow: hidden;
+}
+
+gwt-standard-footer {
+  width: min(100% - 3rem, 1200px);
+  margin-inline: auto;
+  font-size: 1rem;
+  font-size: inherit;
+  font-family: inherit;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+gwt-standard-footer,
+gwt-standard-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+gwt-standard-footer > *,
+gwt-standard-footer nav > * {
+  flex: 1 1 20ch;
+}
+
+gwt-standard-footer nav {
+  flex-grow: 2;
+  gap: 3rem;
+}
+
+gov-logo {
+  display: grid;
+  place-items: center;
+  align-self: flex-start;
+  justify-self: center;
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+copyright-box p,
+copyright-box h4 {
+  text-align: center;
+  max-width: 30ch;
+  padding-bottom: 0.8em;
+}
+
+gov-main-links,
+gov-branch-links {
+  display: flex;
+  flex-direction: column;
+}
+
+gov-main-links p {
+  max-width: 40ch;
+}
+
+gov-main-links > *,
+gov-branch-links > * {
+  padding-bottom: 1rem;
+}
+
+coat-of-arms {
+  width: 150px;
+}
+
+coat-of-arms img {
+  width: 100%;
+  object-fit: contain;
+}
+
+gwt-standard-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+gwt-standard-footer ul li {
+  padding-bottom: 0.2rem;
+}
+
+gwt-standard-footer ul li a {
+  color: var(--text-color);
+}
+gwt-standard-footer ul li a:hover {
+  text-decoration: underline;
+  color: var(--hover-link-color);
+  cursor: pointer;
+}
