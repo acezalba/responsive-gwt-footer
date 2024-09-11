@@ -1,6 +1,6 @@
 # Accessible Government Footer
 
-This is a restyling experiment of the GWT-Footer by [iGovPhil](https://github.com/iGovPhil/gwt-footer). Styles are loaded from `gwt-standard-footer`.
+This is a restyling experiment of the GWT-Footer by [iGovPhil](https://github.com/iGovPhil/gwt-footer). Styles are loaded from `gwt-standard-footer.css`.
 
 ## Highlights
 
